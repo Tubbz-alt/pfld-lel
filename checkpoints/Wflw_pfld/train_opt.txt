@@ -1,0 +1,28 @@
+----------------- Options ---------------
+          annotations_dir: WFLW_annotations              
+          checkpoints_dir: ./checkpoints                 
+                 dataroot: ./datasets/WFLW               	[default: None]
+             dataset_mode: wflw                          
+                end_epoch: 1000                          
+                  gpu_ids: 0                             
+                image_dir: WFLW_images                   
+                  isTrain: True                          	[default: None]
+                       lr: 0.0001                        
+              lr_patience: 40                            
+         max_dataset_size: inf                           
+                    model: pfld                          
+                     name: Wflw_pfld                     
+              num_threads: 6                             
+                    phase: train                         
+            save_test_dir: test_data                     
+           save_train_dir: train_data                    
+                  shuffle: True                          
+              start_epoch: 1                             
+                   suffix:                               
+          train_batchsize: 256                           
+               train_list: train_data/list.txt           
+            val_batchsize: 8                             
+                 val_list: test_data/list.txt            
+                  verbose: False                         
+             weight_decay: 1e-06                         
+----------------- End ---------------------

@@ -1,0 +1,14 @@
+----------------- Options ---------------
+          checkpoints_dir: ./checkpoints                 
+                 dataroot: ./datasets/WFLW               	[default: None]
+             dataset_mode: wflw                          
+                  gpu_ids: 0                             
+                  isTrain: True                          	[default: None]
+          lambda_identity: 0.5                           
+                       lr: 0.0002                        
+                    model: pfld                          
+                     name: Wflw_pfld                     
+               no_dropout: True                          
+                    phase: WFLW_images                   
+                   suffix:                               
+----------------- End ---------------------
