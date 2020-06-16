@@ -38,6 +38,13 @@ if __name__ == '__main__':
 
     visualizer = Visualizer(opt)        # create a visualizer that display/save images and plots
 
+    total_iters = 0
+    for epoch in range(opt.start_epoch, opt.end_epoch + 1):
+        epoch_start_time = time.time()
+        iter_data_time = time.time()
+        epoch_iter = 0
+
+        visualizer.reset()
 
 
 

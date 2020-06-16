@@ -1,8 +1,15 @@
 ----------------- Options ---------------
           annotations_dir: WFLW_annotations              
           checkpoints_dir: ./checkpoints                 
-                 dataroot: ./datasets/WFLW               	[default: None]
+                 dataroot: ./datasets/WFLW/              	[default: None]
              dataset_mode: wflw                          
+              display_env: main                          
+             display_freq: 400                           
+               display_id: 1                             
+            display_ncols: 4                             
+             display_port: 8097                          
+           display_server: http://localhost              
+          display_winsize: 256                           
                 end_epoch: 1000                          
                   gpu_ids: 0                             
                 image_dir: WFLW_images                   
@@ -12,8 +19,10 @@
          max_dataset_size: inf                           
                     model: pfld                          
                      name: Wflw_pfld                     
+                  no_html: False                         
               num_threads: 6                             
                     phase: train                         
+               print_freq: 100                           
             save_test_dir: test_data                     
            save_train_dir: train_data                    
                   shuffle: True                          
@@ -21,6 +30,7 @@
                    suffix:                               
           train_batchsize: 256                           
                train_list: train_data/list.txt           
+         update_html_freq: 1000                          
             val_batchsize: 8                             
                  val_list: test_data/list.txt            
                   verbose: False                         
