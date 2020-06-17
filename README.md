@@ -20,7 +20,6 @@ pip3 install -r requirements.txt
 4. move `Mirror98.txt` to `WFLW/WFLW_annotations`
 
 ~~~shell
-$ cd data 
 $ python3 SetPreparation.py
 ~~~
 
@@ -29,7 +28,7 @@ $ python3 SetPreparation.py
 training :
 
 ~~~shell
-$ python3 train.py
+$ python3 train.py --dataroot ./datasets/WFLW/
 ~~~
 
 testing:
