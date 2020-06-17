@@ -1,10 +1,11 @@
 ----------------- Options ---------------
           annotations_dir: WFLW_annotations              
+               batch_size: 1                             
           checkpoints_dir: ./checkpoints                 
                  dataroot: ./datasets/WFLW/              	[default: None]
              dataset_mode: wflw                          
               display_env: main                          
-             display_freq: 400                           
+             display_freq: 200                           
                display_id: 1                             
             display_ncols: 4                             
              display_port: 8097                          
@@ -14,6 +15,7 @@
                   gpu_ids: 0                             
                 image_dir: WFLW_images                   
                   isTrain: True                          	[default: None]
+                 log_file: ./checkpoints/train.logs      
                        lr: 0.0001                        
               lr_patience: 40                            
          max_dataset_size: inf                           
@@ -22,15 +24,18 @@
                   no_html: False                         
               num_threads: 6                             
                     phase: train                         
-               print_freq: 100                           
+               print_freq: 200                           
+                   resume:                               
             save_test_dir: test_data                     
            save_train_dir: train_data                    
                   shuffle: True                          
+                 snapshot: ./checkpoints/snapshot/       
               start_epoch: 1                             
                    suffix:                               
-          train_batchsize: 256                           
+              tensorboard: ./checkpoints/tensorboard     
+          train_batchsize: 128                           
                train_list: train_data/list.txt           
-         update_html_freq: 1000                          
+         update_html_freq: 400                           
             val_batchsize: 8                             
                  val_list: test_data/list.txt            
                   verbose: False                         
