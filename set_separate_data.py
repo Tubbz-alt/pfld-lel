@@ -43,7 +43,7 @@ class ImageSeparateData():
 
     def save_data(self, path, prefix):
         attributes = [self.image_pose, self.image_expression, self.image_illumination, self.image_make_up, self.image_occlusion, self.image_blur]
-        attributes = np.asarray(attributes, dtype=np.int32)
+        attributes = np.asarray(attributes, dtype = np.int32)
         attributes_str = ' '.join(list(map(str, attributes)))
         labels = []
         # 这些点的含义是每两个点代表脸上器官的边界，比如33，38 是右眉毛的边框点，看WFLW数据集脸谱图

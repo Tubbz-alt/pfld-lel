@@ -11,7 +11,8 @@ device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 
 def train(trainDataLoader, pfldNet, auxiliaryNet, optimizer, epoch):
     losses = AverageMeter()
-    for img, landmark_gt, attribute_gt, euler_angle_gt in enumerate(trainDataLoader):
+    #for img, landmark_gt, attribute_gt, euler_angle_gt in enumerate(trainDataLoader):
+    for img, landmark_gt, attribute_gt, euler_angle_gt in trainDataLoader:
         img = img.to(device)
         landmark_gt = landmark_gt.to(device)
         attribute_gt = attribute_gt.to(device)
