@@ -152,7 +152,7 @@ class PFLDLoss(nn.Module):
         mat_ratio = torch.Tensor([
             1.0 / (x) if x > 0 else train_batchsize for x in mat_ratio
         ]).to(device)
-        weight_attribute = torch.sum(attributes_w_n.mul(mat_ratio), axis=1)
+        weight_attribute = torch.sum(attributes_w_n.mul(mat_ratio), axis = 1)
 
         l2_distant = torch.sum((landmark_gt - landmarks) * (landmark_gt - landmarks), axis = 1)
         return torch.mean(weight_angle * weight_attribute * l2_distant), torch.mean(l2_distant)

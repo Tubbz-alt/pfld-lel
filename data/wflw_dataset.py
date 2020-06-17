@@ -11,7 +11,7 @@ from torch.utils.data import DataLoader
 class WFLWDatasets(data.Dataset):
     def __init__(self, dataroot, file_name, transforms = None):
         file_list = os.path.join(dataroot, file_name)
-        print(file_list)
+        #print(file_list)
         self.line = None
         self.path = None
         self.landmarks = None
@@ -21,7 +21,7 @@ class WFLWDatasets(data.Dataset):
         self.transforms = transforms
         with open(file_list, 'r') as f:
             self.lines = f.readlines()
-        print(len(self.lines))
+        #print(len(self.lines))
 
     def __getitem__(self, index):
         self.line = self.lines[index].strip().split()
@@ -57,8 +57,8 @@ def createDatasets(opt):
         drop_last = False
     )
 
-    print(len(trainDataLoader))
-    print(len(valDataLoader))
+    #print(len(trainDataLoader))
+    #print(len(valDataLoader))
     return trainDataLoader, valDataLoader
 
 
